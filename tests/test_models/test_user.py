@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+""" Tests user module
+"""
 import unittest
 import os
 import pep8
@@ -8,7 +9,8 @@ from models.base_model import BaseModel
 
 
 class TestUser(unittest.TestCase):
-
+    """ Tests user module
+    """
     @classmethod
     def setUpClass(cls):
         cls.my_user = User()

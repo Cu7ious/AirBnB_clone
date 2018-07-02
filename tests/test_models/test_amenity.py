@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Tests amenity
+"""
 import unittest
 import os
 import pep8
@@ -7,7 +9,8 @@ from models.base_model import BaseModel
 
 
 class TestAmenity(unittest.TestCase):
-
+    """ Tests amenity
+    """
     @classmethod
     def setUpClass(cls):
         cls.amenity1 = Amenity()

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Unittest to test FileStorage class
+""" Unittest to test FileStorage class
 """
 import unittest
 import pep8
@@ -18,7 +17,8 @@ from models.engine.file_storage import FileStorage
 
 
 class TestFileStorage(unittest.TestCase):
-    '''testing file storage'''
+    """ Tests for file storage
+    """
 
     @classmethod
     def setUpClass(cls):
@@ -38,16 +38,14 @@ class TestFileStorage(unittest.TestCase):
             pass
 
     def test_style_check(self):
-        """
-        Tests pep8 style
+        """ Tests pep8 style
         """
         style = pep8.StyleGuide(quiet=True)
         p = style.check_files(['models/engine/file_storage.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_all(self):
-        """
-        Tests method: all (returns dictionary <class>.<id> : <obj instance>)
+        """ Tests method: all (returns dictionary <class>.<id> : <obj instance>)
         """
         storage = FileStorage()
         instances_dic = storage.all()
@@ -56,8 +54,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertIs(instances_dic, storage._FileStorage__objects)
 
     def test_new(self):
-        """
-        Tests method: new (saves new object into dictionary)
+        """ Tests method: new (saves new object into dictionary)
         """
         m_storage = FileStorage()
         instances_dic = m_storage.all()
@@ -69,8 +66,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertIsNotNone(instances_dic[key])
 
     def test_reload_empty(self):
-        """
-        Tests method: reload (reloads objects from string file)
+        """ Tests method: reload (reloads objects from string file)
         """
         a_storage = FileStorage()
         try:
@@ -85,8 +81,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertIs(a_storage.reload(), None)
 
     def test_reload(self):
-        """
-        Tests method: reload (reloads objects from string file)
+        """ Tests method: reload (reloads objects from string file)
         """
         self.maxDiff = None
         a_storage = FileStorage()

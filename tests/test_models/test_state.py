@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+""" Tests state
+"""
 import unittest
 import os
 import pep8
@@ -8,7 +9,8 @@ from models.base_model import BaseModel
 
 
 class TestState(unittest.TestCase):
-
+    """ Tests state
+    """
     @classmethod
     def setUpClass(cls):
         cls.state1 = State()

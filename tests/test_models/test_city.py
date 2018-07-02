@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+""" Tests city
+"""
 import unittest
 import os
 import pep8
@@ -8,7 +9,8 @@ from models.base_model import BaseModel
 
 
 class TestCity(unittest.TestCase):
-
+    """ Tests city
+    """
     @classmethod
     def setUpClass(cls):
         cls.city1 = City()

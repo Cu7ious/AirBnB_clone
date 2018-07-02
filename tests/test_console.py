@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Tests for the console"""
+""" Tests for the console
+"""
 
 
 import console
@@ -13,7 +14,8 @@ from models.engine.file_storage import FileStorage
 
 
 class TestConsole(unittest.TestCase):
-    """Tests for the console"""
+    """ Tests for the console
+    """
 
     @classmethod
     def setUp(self):
@@ -23,7 +25,8 @@ class TestConsole(unittest.TestCase):
             pass
 
     def test_all(self):
-        """Test all command without args"""
+        """ Test all command without args
+        """
         self.maxDiff = None
         shutil.copy("./tests/allfile.json", "./file.json")
         teststore = FileStorage()
@@ -44,7 +47,8 @@ class TestConsole(unittest.TestCase):
                          json.load("./file.json"))
 
     def test_allargs(self):
-        """Test all command with args, such as all BaseModel"""
+        """ Test all command with args, such as all BaseModel
+        """
         self.maxDiff = None
         shutil.copy("./tests/allfile.json", "./file.json")
         teststore = FileStorage()
@@ -66,7 +70,8 @@ class TestConsole(unittest.TestCase):
                          json.load("./file.json"))
 
     def test_show(self):
-        """Test good show commands"""
+        """ Test good show commands
+        """
         self.maxDiff = None
         shutil.copy("./tests/allfile.json", "./file.json")
         teststore = FileStorage()
@@ -87,7 +92,8 @@ class TestConsole(unittest.TestCase):
                          json.load("./file.json"))
 
     def test_showbad(self):
-        """Test bad show commands"""
+        """ Test bad show commands
+        """
         self.maxDiff = None
         shutil.copy("./tests/allfile.json", "./file.json")
         teststore = FileStorage()
@@ -108,7 +114,8 @@ class TestConsole(unittest.TestCase):
                          json.load("./file.json"))
 
     def test_create(self):
-        """Tests well-behaved create commands. Assumes correct uuid output"""
+        """ Tests well-behaved create commands. Assumes correct uuid output
+        """
         f = open("./tests/increatetest.txt", "r")
         cmdp = console.HBNBCommand(stdin=f, stdout=outbuffer)
         cmdp.use_rawinput = False

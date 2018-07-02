@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+""" Tests revies
+"""
 import unittest
 import os
 import pep8
@@ -8,7 +9,8 @@ from models.base_model import BaseModel
 
 
 class TestReview(unittest.TestCase):
-
+    """ Tests revies
+    """
     @classmethod
     def setUpClass(cls):
         cls.rev1 = Review()

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+""" Tests place
+"""
 import unittest
 import os
 import pep8
@@ -8,7 +9,8 @@ from models.base_model import BaseModel
 
 
 class TestPlace(unittest.TestCase):
-
+    """ Tests place
+    """
     @classmethod
     def setUpClass(cls):
         cls.place1 = Place()

@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-'''
-Defines unittets for BaseModel class
-'''
+""" Defines unittets for BaseModel class
+"""
 import unittest
 import pep8
 from models.base_model import BaseModel
 
 
 class TestBaseModelClass(unittest.TestCase):
-    '''Testing BaseModel Class
-
-    '''
+    """ Tests for BaseModel Class
+    """
 
     @classmethod
     def setUpClass(cls):
