@@ -1,5 +1,4 @@
-.container section.filters
-{
+.container section.filters {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -11,8 +10,7 @@
     margin: auto;
 }
 
-.container section.filters div
-{
+.container section.filters div {
     text-align: center;
     border-style: none;
     height: 4em;
@@ -24,25 +22,22 @@
     flex-grow: 1;
 }
 
-.container section.filters div.locations
-{
+.container section.filters div.locations {
     z-index: 10;
 }
 
-.container section.filters div.amenities
-{
+.container section.filters div.amenities {
     z-index: 9;
 }
 
 
-.container section.filters div h3
-{
+.container section.filters div h3 {
     font-weight: 600;
     margin-bottom: 0;
     width: 100%;
 }
-.container section.filters div h4
-{
+
+.container section.filters div h4 {
     width: 100%;
     font-weight: 400;
     font-size: .8em;
@@ -50,8 +45,7 @@
     margin-bottom: .4em;
 }
 
-.container section.filters div .popover
-{
+.container section.filters div .popover {
     text-indent: 10%;
     text-align: left;
     display: none;
@@ -64,25 +58,22 @@
     border-radius: 4px;
 }
 
-.container section.filters div .popover h2
-{
+.container section.filters div .popover h2 {
     width: 80%;
 }
-.container section.filters div .popover ul
-{
+
+.container section.filters div .popover ul {
     list-style-type: none;
     width: 50%;
 }
 
-.container section.filters div:hover .popover
-{
+.container section.filters div:hover .popover {
     display: block;
     background-color: #FAFAFA;
     height: auto;
 }
 
-.container section.filters button
-{
+.container section.filters button {
     font-size: 1em;
     color: #FFFFFF;
     background-color: #FF5A5F;
@@ -96,13 +87,11 @@
     margin-left: 2%;
 }
 
-.container section.filters button:hover
-{
+.container section.filters button:hover {
     opacity: .9;
 }
 
-.container section.filters div.div_button
-{
+.container section.filters div.div_button {
     flex-grow: 1;
     z-index: 0;
 }

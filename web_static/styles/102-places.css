@@ -1,5 +1,4 @@
-section.places
-{
+section.places {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -12,8 +11,7 @@ section.places
     padding-top: 3em;
 }
 
-section.places h1
-{
+section.places h1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,8 +19,7 @@ section.places h1
     padding-left: 1em;
 }
 
-section.places article
-{
+section.places article {
     position: relative;
     width: 40vw;
     min-width: 14em;
@@ -35,15 +32,13 @@ section.places article
     flex-grow: 1;
 }
 
-section.places article h2
-{
+section.places article h2 {
     font-size: 2em;
     text-align: center;
     margin-top: 2em;
 }
 
-section.places article div.price_by_night
-{
+section.places article div.price_by_night {
     position: absolute;
     top: 0;
     right: 0;
@@ -56,8 +51,7 @@ section.places article div.price_by_night
     padding: .4em .1em 0 .1em;
 }
 
-section.places article div.information
-{
+section.places article div.information {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -71,8 +65,7 @@ section.places article div.information
     border-color: #DDDDDD;
 }
 
-section.places article div.information div
-{
+section.places article div.information div {
     width: 4em;
     height: 1em;
     background-repeat: no-repeat;
@@ -84,19 +77,16 @@ section.places article div.information div
 }
 
 
-section.places article div.amenities
-{
+section.places article div.amenities {
     text-align: left;
 }
 
-section.places article div.amenities h2
-{
+section.places article div.amenities h2 {
     text-align: left;
     border-bottom: 1px solid #DDDDDD;
 }
 
-section.places article div.amenities ul li
-{
+section.places article div.amenities ul li {
     height: 2em;
     list-style: none;
     background-repeat: no-repeat;
@@ -105,54 +95,43 @@ section.places article div.amenities ul li
     padding-top: 1em;
 }
 
-section.places article div.amenities ul li.wifi
-{
+section.places article div.amenities ul li.wifi {
     background-image: url('../images/icon_wifi.png')
 }
 
-section.places article div.amenities ul li.pets
-{
+section.places article div.amenities ul li.pets {
     background-image: url('../images/icon_pets.png')
 }
 
-section.places article div.amenities ul li.tv
-{
+section.places article div.amenities ul li.tv {
     background-image: url('../images/icon_tv.png')
 }
 
-
-section.places article div.reviews
-{
+section.places article div.reviews {
     text-align: left;
 }
 
-section.places article div.reviews h2
-{
+section.places article div.reviews h2 {
     text-align: left;
     border-bottom: 1px solid #DDDDDD
 }
 
-section.places article div.reviews ul li
-{
+section.places article div.reviews ul li {
     list-style: none;
 }
 
-section.places article div.information div.max_guest
-{
+section.places article div.information div.max_guest {
     background-image: url('../images/icon_group.png')
 }
 
-section.places article div.information div.number_rooms
-{
+section.places article div.information div.number_rooms {
     background-image: url('../images/icon_bed.png')
 }
 
-section.places article div.information div.number_bathrooms
-{
+section.places article div.information div.number_bathrooms {
     background-image: url('../images/icon_bath.png')
 }
 
-section.places article div.user, section.places article div.description
-{
+section.places article div.user, section.places article div.description {
     text-align: left;
 }

@@ -1,5 +1,4 @@
-header
-{
+header {
     background-color: #FFFFFF;
     height: 70px;
     width: 100%;
@@ -8,8 +7,7 @@ header
     border-color: #CCCCCC;
 }
 
-header div.logo
-{
+header div.logo {
     position: absolute;
     background:url('../images/logo.png');
     left: 20px;
