@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-'''
-Defines the FileStorage class
-'''
+""" Defines the FileStorage class
+""" 
 import json
 from models.base_model import BaseModel
 from models.user import User
@@ -13,12 +12,12 @@ from models.review import Review
 
 
 class FileStorage:
-    '''Class that stores objects in JSON strings
+    """ Class that stores objects in JSON strings
 
     Attributes:
-    file_path (str): path to the JSON file
-    objects (dict): stores all objects by class
-    '''
+        file_path (str): path to the JSON file
+        objects (dict): stores all objects by class
+    """
 
     __file_path = 'file.json'
     __objects = {}
@@ -32,24 +31,22 @@ class FileStorage:
         "Review": Review}
 
     def all(self):
-        '''Returns the dictionary __objects
+        """ Returns the dictionary __objects
 
         Return:
-            returns __objects
-        '''
+            __objects
+        """
         return FileStorage.__objects
 
     def new(self, obj):
-        '''Sets new object in __objects dictionary
-
-        '''
+        """ Sets new object in __objects dictionary
+        """
         k = '{}.{}'.format(obj.__class__.__name__, obj.id)
         FileStorage.__objects[k] = obj
 
     def save(self):
-        '''Serializes __objects to the JSON file
-
-        '''
+        """ Serializes __objects to the JSON file
+        """
         save_dict = {}
         for k, v in FileStorage.__objects.items():
             v_dict = v.to_dict()
@@ -58,9 +55,8 @@ class FileStorage:
             json.dump(save_dict, f)
 
     def reload(self):
-        '''Deserialize the JSON file to __objects
-
-        '''
+        """ Deserialize the JSON file to __objects
+        """
         try:
             with open(FileStorage.__file_path, 'r') as f:
                 dicts = json.load(f)
@@ -73,11 +69,10 @@ class FileStorage:
 
     @classmethod
     def get_object(cls, id=''):
-        '''Returns an object based on id
-
+        """ Returns an object based on id
         Return:
-        returns an object that matches id or prints an error on failure
-        '''
+            an object that matches id or prints an error on failure
+        """
         objects = cls.__objects
         for obj in objects.values():
             if obj.id == id:

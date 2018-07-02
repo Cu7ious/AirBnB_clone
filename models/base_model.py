@@ -1,26 +1,24 @@
 #!/usr/bin/python3
-'''
-Defines the class BaseModel
-'''
+""" Defines the class BaseModel
+"""
 import uuid
 import models
 from datetime import datetime
 
 
 class BaseModel:
-    '''Defines all common attributes/methods for other classes
+    """ Defines all common attributes/methods for other classes
 
     Attributes:
         id (string): unique user id
         created_at (datetime): time object was created
         updated__at (datetime): time object was  changed
-    '''
+    """ 
 
     def __init__(self, *args, **kwargs):
-        '''Initializes an object
-
-        '''
-        time_format = '%Y-%m-%dT%H:%M:%S.%f'
+        """ Initializes an object
+        """ 
+        time_format = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             for k, v in kwargs.items():
                 if k == "__class__":
@@ -43,27 +41,26 @@ class BaseModel:
             models.storage.new(self)
 
     def __str__(self):
-        '''Prints a string version of any object
+        """ Prints a string version of any object
 
         Return:
             returns the string version
-        '''
+        """
         return '[{}] ({}) {}'.format(self.__class__.__name__,
                                      self.id, self.__dict__)
 
     def save(self):
-        '''Updates updated_at with the current datetime
-
-        '''
+        """ Updates updated_at with the current datetime
+        """
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        '''Returns a dictionary of all keys/values of __dict__
+        """ Returns a dictionary of all keys/values of __dict__
 
         Return:
             returns a dictionary
-        '''
+        """
         self_dict = self.__dict__.copy()
         self_dict['__class__'] = self.__class__.__name__
         self_dict['created_at'] = self.created_at.isoformat()
@@ -72,7 +69,8 @@ class BaseModel:
 
     @classmethod
     def count(self):
-        '''Returns a count of instance objects'''
+        """ Returns a count of instance objects
+        """ 
         objects = models.storage.all()
         count = 0
 
